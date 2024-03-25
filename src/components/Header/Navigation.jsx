@@ -7,9 +7,9 @@ const Navigation = () => {
         <li><NavLink to="/listedbook">Listed Books</NavLink></li>
         <li><NavLink to="/pageread">Pages to Read</NavLink></li>
     </>
-    
+
     return (
-        <div className="navbar ">
+        <div className="navbar w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -17,19 +17,21 @@ const Navigation = () => {
                     </div>
                     <ul
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 space-y-2">
-                            {links}
-                        <button className="btn btn-active btn-primary">Star Applying</button>
+                        {links}
+                        <button className="btn btn-active btn-primary">Sign In</button>
+                        <button className="btn btn-active btn-primary">Sign Up</button>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl font-bold lexend">Career</a>
+                <a className="btn btn-ghost text-3xl font-bold lexend">Books Zone</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-10">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <button className="btn custom-button">Star Applying</button>
+            <div className="navbar-end gap-4 ">
+                <button className="btn btn-active text-white bg-green-500">Sign In</button>
+                <button className="btn btn-active btn-primary">Sign Up</button>
             </div>
         </div>
     );

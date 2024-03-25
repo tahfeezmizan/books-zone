@@ -1,0 +1,107 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/dp0sQ4T/book-cover-To-Kill-a-Mockingbird-many-1961.webp",
+      "review": "A powerful story about racial injustice and moral growth.",
+      "totalPages": 336,
+      "rating": 4.28,
+      "category": "Fiction",
+      "tags": ["Classic", "Social Issues"],
+      "publisher": "J.B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 2,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/wN7Y8nv/The-Great-Gatsby-Cover-1925-Retouched.jpg",
+      "review": "A mesmerizing tale of love, greed, and the American dream.",
+      "totalPages": 180,
+      "rating": 3.92,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 3,
+      "bookName": "White Noise",
+      "author": "Don DeLillo",
+      "image": "https://i.ibb.co/b290DJq/61t-Q54osu-SL-AC-UF1000-1000-QL80.jpg",
+      "review": "A dystopian masterpiece that remains disturbingly relevant.",
+      "totalPages": 328,
+      "rating": 4.18,
+      "category": "Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1985
+    },
+    {
+      "bookId": 4,
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "image": "https://i.ibb.co/Q6QRYXd/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg",
+      "review": "A magical adventure that captivates readers of all ages.",
+      "totalPages": 309,
+      "rating": 4.48,
+      "category": "Fantasy",
+      "tags": ["Magic", "Adventure"],
+      "publisher": "Bloomsbury",
+      "yearOfPublishing": 1997
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/Xy4DGNw/download.png",
+      "review": "An iconic coming-of-age novel that resonates with adolescents.",
+      "totalPages": 277,
+      "rating": 3.8,
+      "category": "Fiction",
+      "tags": ["Coming of Age", "Rebellion"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 6,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/WxwpH5J/MV5-BMTA1-NDQ3-NTcy-OTNe-QTJe-QWpw-Z15-Bb-WU3-MDA0-Mz-A4-Mz-E-V1.jpg",
+      "review": "A timeless romance filled with wit and charm.",
+      "totalPages": 279,
+      "rating": 4.26,
+      "category": "Classic",
+      "tags": ["Romance", "Satire"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 7,
+      "bookName": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/M6gqZ3R/147470-ml-1141823.jpg",
+      "review": "An enchanting tale of adventure in Middle-earth.",
+      "totalPages": 310,
+      "rating": 4.27,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Quest"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1937
+    },
+    {
+      "bookId": 8,
+      "bookName": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/vxYZV1n/download.jpg",
+      "review": "An epic fantasy saga that transports readers to a vividly imagined world.",
+      "totalPages": 1178,
+      "rating": 4.51,
+      "category": "Fantasy",
+      "tags": ["Epic", "Adventure"],
+      "publisher": "George Allen & Unwin",
+      "yearOfPublishing": 1954
+    }
+  ]
+  
