@@ -1,11 +1,12 @@
 import React from 'react';
+import { FaRegStar } from "react-icons/fa";
 
 const SingleBooks = ({ books }) => {
-    const { image, bookName, author, tags } = books;
+    const { image, bookName, author, tags, category, rating } = books;
     console.log(books);
     return (
-        <div className="p-6 border border-gray-200 rounded-md">
-            <div className="bg-gray-200 rounded-lg flex items-center justify-center p-10 mb-6">
+        <div className="p-6 border border-gray-200 rounded-2xl">
+            <div className="bg-gray-100 rounded-2xl flex items-center justify-center p-10 mb-6">
                 <img className="max-w-64 max-h-60 rounded" src={image} alt="" />
             </div>
 
@@ -15,17 +16,12 @@ const SingleBooks = ({ books }) => {
                 }
             </div>
             <h2 className="py-4 text-2xl font-bold">{bookName}</h2>
-            <p>{author}</p>
-            {/* <div className=" flex gap-5"> */}
-            {/* <button className="btn btn-outline">{remote_or_onsite}</button> */}
-            {/* <button className="btn btn-outline">{job_type}</button> */}
-            {/* </div> */}
-            {/* <div className=" flex gap-6"> */}
-            {/* <p className="flex items-center gap-2"><IoLocationOutline className="text-xl" /> {location}</p> */}
-            {/* <p className="flex items-center gap-2"><AiOutlineDollar className="text-xl" /> {salary}</p> */}
-            {/* </div> */}
-            {/*  */}
-            {/* <NavLink to={`/job/${id}`} className="btn custom-button text-white" >View Details</NavLink> */}
+            <p className='font-medium mb-5'>By: {author}</p>
+
+            <div className=" flex gap-6 justify-between font-medium border-t border-dashed pt-5">
+                <p className="flex items-center gap-2">{category}</p>
+                <p className="flex items-center gap-2">{rating} <FaRegStar /></p>
+            </div>
         </div>
     );
 };
