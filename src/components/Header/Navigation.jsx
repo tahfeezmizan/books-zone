@@ -31,8 +31,8 @@ const Navigation = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4 ">
-                <button className="btn btn-active text-white bg-green-500">Sign In</button>
-                <button className="btn btn-active btn-primary">Sign Up</button>
+                <button className="btn text-white bg-green-500">Sign In</button>
+                <button className="btn bg-[#50B1C9] text-white">Sign Up</button>
             </div>
         </div>
     );

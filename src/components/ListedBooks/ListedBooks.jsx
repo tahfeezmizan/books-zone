@@ -16,18 +16,13 @@ const ListedBooks = () => {
                 <h2 className='text-5xl pb-4 font-bold'>Books</h2>
             </div>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {
-                    // jobs.slice(0, dataLength).map(job => <Job job={job} key={job.id}></Job>)
                     books.map(book => <SingleBooks key={book.bookId} books={book}></SingleBooks>)
                 }
             </div>
 
-            {/* <div className={setDataLenght === jobs.length ? 'hidden' : 'flex items-center justify-center data'}>
-                <button onClick={() => setDataLenght(jobs.length)} className="btn ">See All Jobs</button>
-            </div> */}
-
-            {/* <NavLink className="btn custom-button text-white" >View Details</NavLink> */}
+            
         </div>
     );
 };
