@@ -1,15 +1,26 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { saveReadBook, saveWishList } from '../utility/localStorage';
 
 const BooksDetails = () => {
     const books = useLoaderData();
     const { bookId } = useParams();
     const bookIdInt = parseInt(bookId)
     const book = books.find(book => book.bookId === bookIdInt);
-
     const { image, bookName, author, tags, category, review, totalPages, publisher, yearOfPublishing, rating } = book
 
-    console.log(book)
+    const handleWishlist = () => {
+        saveWishList(bookId)
+        toast("Wow so easy !")
+    }
+
+    const handleReadBook = () => {
+        saveReadBook(bookId)
+        toast("Congs!, Read The Book")
+    }
+
 
     return (
         <div className='w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10'>
@@ -32,13 +43,16 @@ const BooksDetails = () => {
                         }
                     </div>
                     <div className="py-6">
-                    <p>Number of Pages: <span className='font-semibold'>{totalPages}</span></p>
-                    <p>publisher: <span className='font-semibold'>{publisher}</span></p>
-                    <p>Year of Publishing: <span className='font-semibold'>{yearOfPublishing}</span></p>
-                    <p>rating: <span className='font-semibold'>{rating}</span></p>
+                        <p>Number of Pages: <span className='font-semibold'>{totalPages}</span></p>
+                        <p>publisher: <span className='font-semibold'>{publisher}</span></p>
+                        <p>Year of Publishing: <span className='font-semibold'>{yearOfPublishing}</span></p>
+                        <p>rating: <span className='font-semibold'>{rating}</span></p>
                     </div>
-                    <button className='btn btn-outline mr-4'>Read</button>
-                    <button className='btn bg-[#50B1C9] text-white'>Wishlist</button>
+                    <div className="">
+                        <ToastContainer />
+                        <button onClick={handleReadBook} className='btn btn-outline mr-4'>Read</button>
+                        <button onClick={handleWishlist} className='btn bg-[#50B1C9] text-white'>Wishlist</button>
+                    </div>
                 </div>
             </div>
 
