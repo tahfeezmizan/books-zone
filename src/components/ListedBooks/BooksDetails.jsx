@@ -13,14 +13,12 @@ const BooksDetails = () => {
 
     const handleWishlist = () => {
         saveWishList(bookIdInt)
-        toast("Wow so easy !")
+        
     }
 
     const handleReadBook = () => {
         saveReadBook(bookIdInt)
-        toast("Congs!, Read The Book")
     }
-
 
     return (
         <div className='w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10'>
@@ -39,7 +37,7 @@ const BooksDetails = () => {
                     <div className="flex gap-4 items-center py-4 border-b">
                         <h3 className='font-bold'>Tags</h3>
                         {
-                            tags.map(tag => <span className='bg-green-100 rounded-full font-medium text-green-500 px-4 py-2'>#{tag}</span>)
+                            tags.map((tag, index) => <span className='bg-green-100 rounded-full font-medium text-green-500 px-4 py-2' key={index}>#{tag}</span>)
                         }
                     </div>
                     <div className="py-6">
@@ -49,7 +47,6 @@ const BooksDetails = () => {
                         <p>rating: <span className='font-semibold'>{rating}</span></p>
                     </div>
                     <div className="">
-                        <ToastContainer />
                         <button onClick={handleReadBook} className='btn btn-outline mr-4'>Read</button>
                         <button onClick={handleWishlist} className='btn bg-[#50B1C9] text-white'>Wishlist</button>
                     </div>

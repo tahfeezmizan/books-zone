@@ -7,16 +7,27 @@ import StoredReadBookDetials from "./StoredReadBookDetials";
 const StoredBooks = () => {
     const allBooks = useLoaderData();
     const [readBook, setReadBook] = useState([]);
-
-    // const {bookName, author, image} = storedBook;
+    const [wishlist, setWishlist] = useState([]);
+    console.log(wishlist);
 
     useEffect(() => {
         const storedBookIds = getStoredBooks();
         if (allBooks.length > 0) {
             const readBooks = allBooks.filter(books => storedBookIds.includes(books.bookId));
-            setReadBook(readBooks)
+            setReadBook(readBooks);
+            console.log("Read Books",readBooks)
         }
     }, [allBooks]);
+
+    useEffect(() => {
+        const storedWishListIds = getStoredBooks();
+        if (allBooks.length > 0) {
+            const wishlist = allBooks.filter(wishlist => storedWishListIds.includes(wishlist.bookId));
+            setWishlist(wishlist);
+            console.log("WishList data ",wishlist)
+        }
+
+    }, [allBooks])
 
     return (
         <div className='w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10'>
@@ -35,15 +46,22 @@ const StoredBooks = () => {
             </div>
 
             <div role="tablist" className="tabs tabs-lifted">
-                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" />
-                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                    {
-                        readBook.map(readbook => <StoredReadBookDetials readbook={readbook} key={readbook.bookId}></StoredReadBookDetials>)
-                    }
+                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300  p-6">
+                    {/* {
+                        readBook.map(data => <StoredReadBookDetials data={readBook} key={data.bookId}></StoredReadBookDetials>)
+                    } */}
+                    
                 </div>
 
-                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" checked />
-                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">Wishlist Books</div>
+                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 p-6">
+                    {
+                        wishlist.map(data => <StoredReadBookDetials data={wishlist} key={data.bookId}></StoredReadBookDetials>)
+                    }
+                    {/* <StoredReadBookDetials data={wishlist}></StoredReadBeookDtials> */}
+
+                </div>
             </div>
 
         </div>

@@ -14,7 +14,7 @@ const SingleBooks = ({ books }) => {
 
                 <div className="flex gap-4">
                     {
-                        tags.map(tag => <span className='bg-green-100 rounded-full font-medium text-green-500 px-4 py-2'>{tag}</span>)
+                        tags.map(tag => <span key={tag.index} className='bg-green-100 rounded-full font-medium text-green-500 px-4 py-2'>{tag}</span>)
                     }
                 </div>
                 <h2 className="py-4 text-2xl font-bold">{bookName}</h2>
