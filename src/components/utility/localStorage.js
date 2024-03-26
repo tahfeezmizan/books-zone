@@ -21,7 +21,7 @@ const getStoredWishlist = () => {
 const saveReadBook = bookId => {
     const storedBooks = getStoredBooks();
     const isExist = storedBooks.find(books => books === bookId);
-    if (!isExist) {
+    if (!isExist ) {
         storedBooks.push(bookId);
         localStorage.setItem('book read', JSON.stringify(storedBooks));
         toast.success('add books')
@@ -43,4 +43,4 @@ const saveWishList = bookId => {
 
 };
 
-export { getStoredBooks, saveReadBook, saveWishList }
+export { getStoredBooks, saveReadBook, saveWishList, getStoredWishlist }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredBooks } from "../utility/localStorage";
+import { getStoredBooks, getStoredWishlist } from "../utility/localStorage";
 import StoredReadBookDetials from "./StoredReadBookDetials";
 
 
@@ -15,16 +15,16 @@ const StoredBooks = () => {
         if (allBooks.length > 0) {
             const readBooks = allBooks.filter(books => storedBookIds.includes(books.bookId));
             setReadBook(readBooks);
-            console.log("Read Books",readBooks)
+            console.log("Read Books", readBooks)
         }
     }, [allBooks]);
 
     useEffect(() => {
-        const storedWishListIds = getStoredBooks();
+        const storedWishListIds = getStoredWishlist();
         if (allBooks.length > 0) {
             const wishlist = allBooks.filter(wishlist => storedWishListIds.includes(wishlist.bookId));
             setWishlist(wishlist);
-            console.log("WishList data ",wishlist)
+            console.log("WishList data ", wishlist)
         }
 
     }, [allBooks])
@@ -48,19 +48,16 @@ const StoredBooks = () => {
             <div role="tablist" className="tabs tabs-lifted">
                 <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300  p-6">
-                    {/* {
-                        readBook.map(data => <StoredReadBookDetials data={readBook} key={data.bookId}></StoredReadBookDetials>)
-                    } */}
-                    
+                    {
+                        readBook?.map(readBookData => <StoredReadBookDetials data={readBookData} key={readBookData.bookId}></StoredReadBookDetials>)
+                    }
                 </div>
 
                 <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300 p-6">
                     {
-                        wishlist.map(data => <StoredReadBookDetials data={wishlist} key={data.bookId}></StoredReadBookDetials>)
+                        wishlist?.map(wishListData => <StoredReadBookDetials data={wishListData} key={wishListData.bookId}></StoredReadBookDetials>)
                     }
-                    {/* <StoredReadBookDetials data={wishlist}></StoredReadBeookDtials> */}
-
                 </div>
             </div>
 

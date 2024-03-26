@@ -1,7 +1,6 @@
 
 const StoredReadBookDetials = ({ data }) => {
     const { image, bookName, author, category, tags, yearOfPublishing, totalPages, publisher, rating, } = data;
-    console.log(data.length)
 
     return (
         <div className="flex items-center gap-10 border p-6 mb-6 rounded-xl">
