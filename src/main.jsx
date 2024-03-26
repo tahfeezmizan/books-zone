@@ -9,10 +9,10 @@ import {
 import Root from './components/Root/Root.jsx';
 import Navigation from './components/Header/Navigation.jsx';
 import Home from './components/Home/Home.jsx';
-import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import PagesRead from './components/PagesRead/PagesRead.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import BooksDetails from './components/ListedBooks/BooksDetails.jsx';
+import StoredBooks from './components/ListedBooks/StoredBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -27,7 +27,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/listedbook',
-        element: <ListedBooks></ListedBooks>
+        element: <StoredBooks></StoredBooks>,
+        loader: () => fetch('../books.json'),
       },
       {
         path: '/pageread',
@@ -44,6 +45,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
