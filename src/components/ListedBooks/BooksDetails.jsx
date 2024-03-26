@@ -12,12 +12,12 @@ const BooksDetails = () => {
     const { image, bookName, author, tags, category, review, totalPages, publisher, yearOfPublishing, rating } = book
 
     const handleWishlist = () => {
-        saveWishList(bookIdInt)
+        saveWishList(bookIdInt);
         
     }
 
     const handleReadBook = () => {
-        saveReadBook(bookIdInt)
+        saveReadBook(bookIdInt);
     }
 
     return (
