@@ -13,7 +13,7 @@ const StoredReadBookDetials = ({ data }) => {
                 <div className="flex gap-4 items-center mb-4">
                     <h3 className='font-bold'>Tags:</h3>
                     {
-                        tags?.map(tag => <span className='bg-green-100 rounded-full font-medium text-green-500 px-4 py-1'>#{tag}</span>)
+                        tags?.map((tag, index) => <span key={index} className='bg-green-100 rounded-full font-medium text-green-500 px-4 py-1'>#{tag}</span>)
                     }
                     <p>Year of Publishing: <span className='font-semibold'>{yearOfPublishing}</span></p>
                 </div>

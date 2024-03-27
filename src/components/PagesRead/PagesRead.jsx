@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { getStoredBooks } from '../utility/localStorage';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 const data = [
@@ -61,6 +63,16 @@ const TriangleBar = (props) => {
 };
 
 const PagesRead = () => {
+    const books = useLoaderData();
+    const [readBookChart, setReadBookChart] = useState([]);
+
+    useEffect(() => { 
+        const readSavedBook = getStoredBooks();
+        const loadReadbook = books.filter(books => readSavedBook.includes(books.bookId));
+        setReadBookChart(loadReadbook)
+    }, [books]);
+
+    console.log(readBookChart)
 
     return (
         <div className="w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10">
