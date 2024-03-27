@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import { getStoredBooks, getStoredWishlist } from "../utility/localStorage";
 import StoredReadBookDetials from "./StoredReadBookDetials";
 
-
 const StoredBooks = () => {
     const allBooks = useLoaderData();
     const [readBook, setReadBook] = useState([]);
