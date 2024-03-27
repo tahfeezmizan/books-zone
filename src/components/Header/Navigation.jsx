@@ -7,6 +7,7 @@ const Navigation = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/listedbook">Listed Books</NavLink></li>
         <li><NavLink to="/pageread">Pages to Read</NavLink></li>
+        <li><NavLink to="/collectionbooks">Collection Books</NavLink></li>
         <li><NavLink to="/blogs">Blogs</NavLink></li>
     </>
 
@@ -27,7 +28,7 @@ const Navigation = () => {
                 <a className="btn btn-ghost text-3xl font-bold lexend">Books Zone</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-10">
+                <ul className="menu menu-horizontal px-1 gap-4">
                     {links}
                 </ul>
             </div>

@@ -16,6 +16,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import BooksDetails from './components/ListedBooks/BooksDetails.jsx';
 import StoredBooks from './components/ListedBooks/StoredBooks.jsx';
 import Blogs from './components/Blogs/Blogs.jsx';
+import CollectionBooks from './components/CollectionBook/CollectionBooks.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: '/pageread',
         element: <PagesRead></PagesRead>,
+        loader: () => fetch('/books.json'),
+      },
+      {
+        path: '/collectionbooks',
+        element: <CollectionBooks></CollectionBooks>,
         loader: () => fetch('/books.json'),
       },
       {

@@ -13,7 +13,6 @@ const Banner = () => {
                     </div>
                     <div className="">
                         <img src="" alt="" />
-                        <h1 className="text-4xl lg:text-5xl font-bold px-1">Books to freshen up </h1>
                     </div>
                 </div>
             </div>
