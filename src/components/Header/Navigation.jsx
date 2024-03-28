@@ -21,20 +21,22 @@ const Navigation = () => {
                     <ul
                         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 space-y-2">
                         {links}
-                        <button className="btn btn-active btn-primary">Sign In</button>
-                        <button className="btn btn-active btn-primary">Sign Up</button>
+                        <button className="btn text-white bg-green-500 hover:bg-green-600">Sign In</button>
+                        <button className="btn bg-[#50B1C9] text-white">Sign Up</button>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-3xl font-bold lexend">Books Zone</a>
             </div>
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-4">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end gap-4 ">
-                <button className="btn text-white bg-green-500">Sign In</button>
-                <button className="btn bg-[#50B1C9] text-white">Sign Up</button>
+
+            <div className="navbar-end gap-4 hidden md:block">
+                <button className="btn text-white bg-green-500 hover:bg-green-600">Sign In</button>
+                <button className="btn bg-[#50B1C9] hover:bg-[#48a0b6] text-white">Sign Up</button>
             </div>
         </div>
     );

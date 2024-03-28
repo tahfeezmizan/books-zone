@@ -1,4 +1,6 @@
-li a.active {
-    color: red;
-    font-weight: 500;
+a.active {
+    background: none !important;
+    border: 1px solid;
+    color: rgb(74 222 128) !important;
+    font-weight: 700;
 }

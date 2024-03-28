@@ -37,16 +37,16 @@ const PagesRead = () => {
 
 
     return (
-        <div className="w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10">
-            <div className="bg-gray-100 p-24 rounded-xl">
+        <div className="w-full md:w-8/12 mx-auto px-4 md:px-6 py-10">
+            <div className="bg-gray-100 p-2 lg:p-24 rounded-xl">
                 <BarChart
-                    width={1120}
-                    height={550}
+                    width={window.innerWidth > 768 ? 1120 : window.innerWidth - 32}
+                    height={window.innerWidth > 768 ? 550 : 300}
                     data={readBookChart}
                     margin={{
                         top: 20,
                         right: 30,
-                        left: 20,
+                        left: 10,
                         bottom: 5,
                     }}
                 >
@@ -61,6 +61,7 @@ const PagesRead = () => {
                 </BarChart>
             </div>
         </div>
+
     );
 };
 
