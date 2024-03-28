@@ -5,7 +5,7 @@ const CollectionBooks = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch('books.json')
+        fetch('collectionsbooks.json')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [])
@@ -16,7 +16,7 @@ const CollectionBooks = () => {
                 <h2 className='text-5xl pb-4 font-bold'>Our Collection Books</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
                 {
                     books.map(book => <SingleCollectionBook key={book.bookId} books={book}></SingleCollectionBook>)
                 }

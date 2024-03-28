@@ -1,0 +1,99 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "Atomic Habits",
+    "author": "James Clear",
+    "image": "https://i.ibb.co/QvLdF9Q/download-1.jpg",
+    "review": "To Kill a Mockingbird is a novel by Harper Lee published in 1960. It is a story about a young girl named Scout Finch growing up in the Southern United States during the 1930s. The novel explores themes of racial injustice, moral growth, and the loss of innocence.",
+    "totalPages": 320,
+    "rating": 4.28,
+    "category": "Fiction",
+    "tags": [
+      "Business",
+      "Economics"
+    ],
+    "publisher": "Penguin Random House, 2022",
+    "yearOfPublishing": 2022
+  },
+  {
+    "bookId": 2,
+    "bookName": "Think and Grow Rich",
+    "author": " Napoleon Hill",
+    "image": "https://i.ibb.co/rkHX0rc/download-1.png",
+    "review": "The Great Gatsby is a novel by American author F. Scott Fitzgerald first published in 1925. It is set in the fictional town of West Egg on Long Island and follows the story of Jay Gatsby, a wealthy and mysterious man, and his pursuit of the American Dream. The novel explores themes of love, wealth, and the corruption of the American Dream.",
+    "totalPages": 238,
+    "rating": 3.92,
+    "category": "Fiction",
+    "tags": [
+      "Classic",
+      "Romance"
+    ],
+    "publisher": "Charles Scribner's Sons",
+    "yearOfPublishing": 1937
+  },
+  {
+    "bookId": 3,
+    "bookName": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki, Sharon Lechter",
+    "image": "https://i.ibb.co/gFmzbNH/Rich-Dad-Poor-Dad.jpg",
+    "review": "The novel opens with the September 1st arrival of students at the aforementioned college. Like a reductive version of the Conestoga wagon trains of old, station wagons ''arrive in a long shining line. Laden with stereos, radios, personal computers, hair-dryers and hair-styling irons rather than the tools of physical survival.",
+    "totalPages": 328,
+    "rating": 4.18,
+    "category": "Fiction",
+    "tags": [
+      "Dystopian",
+      "Political"
+    ],
+    "publisher": "Warner Books",
+    "yearOfPublishing": 2000
+  },
+  {
+    "bookId": 4,
+    "bookName": "Harry Potter",
+    "author": "J.K. Rowling",
+    "image": "https://i.ibb.co/Q6QRYXd/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg",
+    "review": "Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J.K. Rowling and the first book in the Harry Potter series. It follows the story of a young wizard, Harry Potter, who discovers his magical heritage and attends Hogwarts School of Witchcraft and Wizardry. The novel explores themes of friendship, courage, and the battle between good and evil.",
+    "totalPages": 309,
+    "rating": 4.48,
+    "category": "Fantasy",
+    "tags": [
+      "Magic",
+      "Adventure"
+    ],
+    "publisher": "Bloomsbury",
+    "yearOfPublishing": 1997
+  },
+  {
+    "bookId": 5,
+    "bookName": "Start with Why",
+    "author": "Simon Sinek",
+    "image": "https://i.ibb.co/PTgpdLJ/Start-With-Why.jpg",
+    "review": "The Catcher in the Rye is a novel by J.D. Salinger published in 1951. It is narrated by Holden Caulfield, a teenage boy who is expelled from his prep school and wanders around New York City. The novel explores themes of teenage angst, alienation, and the loss of innocence.",
+    "totalPages": 255,
+    "rating": 3.8,
+    "category": "Motivation",
+    "tags": [
+      "Coming of Age",
+      "Rebellion"
+    ],
+    "publisher": "Portfolio",
+    "yearOfPublishing": 2009
+  },
+  {
+    "bookId": 6,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/WxwpH5J/MV5-BMTA1-NDQ3-NTcy-OTNe-QTJe-QWpw-Z15-Bb-WU3-MDA0-Mz-A4-Mz-E-V1.jpg",
+    "review": "Pride and Prejudice is a romantic novel by Jane Austen published in 1813. It follows the story of Elizabeth Bennet, a young woman in England, and her interactions with various suitors. The novel explores themes of class, marriage, and societal expectations.",
+    "totalPages": 279,
+    "rating": 4.26,
+    "category": "Classic",
+    "tags": [
+      "Romance",
+      "Satire"
+    ],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  }
+  
+]
