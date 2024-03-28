@@ -1,22 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Root from './components/Root/Root.jsx';
-import Navigation from './components/Header/Navigation.jsx';
-import Home from './components/Home/Home.jsx';
-import PagesRead from './components/PagesRead/PagesRead.jsx';
+import CollectionBooks from './components/CollectionBook/CollectionBooks.jsx';
+import ContactUs from './components/ContactUs/ContactUs.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import Home from './components/Home/Home.jsx';
 import BooksDetails from './components/ListedBooks/BooksDetails.jsx';
 import StoredBooks from './components/ListedBooks/StoredBooks.jsx';
-import Blogs from './components/Blogs/Blogs.jsx';
-import CollectionBooks from './components/CollectionBook/CollectionBooks.jsx';
+import PagesRead from './components/PagesRead/PagesRead.jsx';
+import Root from './components/Root/Root.jsx';
+import './index.css';
 
 
 const router = createBrowserRouter([
@@ -45,8 +43,8 @@ const router = createBrowserRouter([
         loader: () => fetch('/books.json'),
       },
       {
-        path: '/blogs',
-        element: <Blogs></Blogs>
+        path: '/contact',
+        element: <ContactUs></ContactUs>
       },
       {
         path: '/booksdetails/:bookId',

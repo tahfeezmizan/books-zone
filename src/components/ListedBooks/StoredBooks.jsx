@@ -7,7 +7,7 @@ const StoredBooks = () => {
     const allBooks = useLoaderData();
     const [readBook, setReadBook] = useState([]);
     const [wishlist, setWishlist] = useState([]);
-    const [sortBy, setSortBy] = useState(""); // State to hold the selected sorting criteria
+    const [sortBy, setSortBy] = useState("");
 
     useEffect(() => {
         const storedBookIds = getStoredBooks();
@@ -25,29 +25,25 @@ const StoredBooks = () => {
         }
     }, [allBooks]);
 
-    // Sorting function for read books
-    const sortReadBooks = (criteria) => {
-        let sortedReadBooks = [...readBook];
-        if (criteria === "rating") {
-            sortedReadBooks.sort((a, b) => b.rating - a.rating);
-        } else if (criteria === "pages") {
-            sortedReadBooks.sort((a, b) => a.pages - b.pages);
-        } else if (criteria === "publisherYear") {
-            sortedReadBooks.sort((a, b) => a.publisherYear - b.publisherYear);
+    // Sorting function for both read books and wishlist
+    const sortBooks = (books, sorting) => {
+        let sortedBooks = [...books];
+        if (sorting === "rating") {
+            sortedBooks.sort((a, b) => b.rating - a.rating);
+        } else if (sorting === "totalPages") {
+            sortedBooks.sort((a, b) => b.totalPages - a.totalPages);
+        } else if (sorting === "yearOfPublishing") {
+            sortedBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
         }
-        setReadBook(sortedReadBooks);
+        return sortedBooks;
     };
 
-    // Sorting function for wishlist
-    const sortWishlist = (criteria) => {
-        let sortedWishlist = [...wishlist];
-        if (criteria === "rating") {
-            sortedWishlist.sort((a, b) => b.rating - a.rating);
-        } else if (criteria === "pages") {
-            sortedWishlist.sort((a, b) => a.pages - b.pages);
-        } else if (criteria === "publisherYear") {
-            sortedWishlist.sort((a, b) => a.publisherYear - b.publisherYear);
-        }
+    // Handler for sorting
+    const handleSort = (sorting) => {
+        setSortBy(sorting);
+        const sortedReadBooks = sortBooks(readBook, sorting);
+        const sortedWishlist = sortBooks(wishlist, sorting);
+        setReadBook(sortedReadBooks);
         setWishlist(sortedWishlist);
     };
 
@@ -62,25 +58,21 @@ const StoredBooks = () => {
             <div className="flex items-center justify-center dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn m-1 text-center">Sort By</div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a onClick={() => { setSortBy("rating"); sortReadBooks("rating"); sortWishlist("rating"); }}>Rating</a></li>
-                    <li><a onClick={() => { setSortBy("pages"); sortReadBooks("pages"); sortWishlist("pages"); }}>Number of pages</a></li>
-                    <li><a onClick={() => { setSortBy("publisherYear"); sortReadBooks("publisherYear"); sortWishlist("publisherYear"); }}>Publisher year</a></li>
+                    <li><a onClick={() => handleSort("rating")}>Rating</a></li>
+                    <li><a onClick={() => handleSort("totalPages")}>Number of Pages</a></li>
+                    <li><a onClick={() => handleSort("yearOfPublishing")}>Publisher Year</a></li>
                 </ul>
             </div>
 
             <div role="tablist" className="tabs tabs-lifted">
                 <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300  p-6">
-                    {
-                        readBook?.map(readBookData => <StoredReadBookDetials data={readBookData} key={readBookData.bookId}></StoredReadBookDetials>)
-                    }
+                    {readBook.map(readBookData => <StoredReadBookDetials data={readBookData} key={readBookData.bookId}></StoredReadBookDetials>)}
                 </div>
 
                 <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300 p-6">
-                    {
-                        wishlist?.map(wishListData => <StoredReadBookDetials data={wishListData} key={wishListData.bookId}></StoredReadBookDetials>)
-                    }
+                    {wishlist.map(wishListData => <StoredReadBookDetials data={wishListData} key={wishListData.bookId}></StoredReadBookDetials>)}
                 </div>
             </div>
 
