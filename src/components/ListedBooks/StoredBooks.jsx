@@ -8,6 +8,8 @@ const StoredBooks = () => {
     const [readBook, setReadBook] = useState([]);
     const [wishlist, setWishlist] = useState([]);
     const [sortBy, setSortBy] = useState("");
+    const [check, setCheck] = useState(true);
+    console.log(check)
 
     useEffect(() => {
         const storedBookIds = getStoredBooks();
@@ -55,22 +57,22 @@ const StoredBooks = () => {
             </div>
 
             {/* Sort By button  */}
-            <div className="flex items-center justify-center dropdown dropdown-bottom">
+            <div className="flex items-center justify-center dropdown dropdown-bottom mb-52">
                 <div tabIndex={0} role="button" className="btn m-1 text-center">Sort By</div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a onClick={() => handleSort("rating")}>Rating</a></li>
-                    <li><a onClick={() => handleSort("totalPages")}>Number of Pages</a></li>
-                    <li><a onClick={() => handleSort("yearOfPublishing")}>Publisher Year</a></li>
+                    <li><p onClick={() => handleSort("rating")}>Rating</p></li>
+                    <li><p onClick={() => handleSort("totalPages")}>Number of Pages</p></li>
+                    <li><p onClick={() => handleSort("yearOfPublishing")}>Publisher Year</p></li>
                 </ul>
             </div>
 
             <div role="tablist" className="tabs tabs-lifted">
-                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" checked />
+                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" onClick={() => setCheck(!check)} checked={check} />
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300  p-6">
                     {readBook.map(readBookData => <StoredReadBookDetials data={readBookData} key={readBookData.bookId}></StoredReadBookDetials>)}
                 </div>
 
-                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" />
+                <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" onClick={() => setCheck(!check)} checked={!check}/>
                 <div role="tabpanel" className="tab-content bg-base-100 border-base-300 p-6">
                     {wishlist.map(wishListData => <StoredReadBookDetials data={wishListData} key={wishListData.bookId}></StoredReadBookDetials>)}
                 </div>
