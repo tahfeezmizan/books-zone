@@ -1,5 +1,7 @@
 # Book Zone
 
+Live link: https://bookszoneass8.netlify.app
+
 Welcome to Book Zone where imagination knows no bounds and every page has a new adventure! Dive into a world of captivating narratives, intriguing characters and unforgettable journeys.
 
 ## Related
